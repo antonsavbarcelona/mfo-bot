@@ -12,11 +12,12 @@ from aiogram.types import ReplyKeyboardRemove, \
     InlineKeyboardMarkup, InlineKeyboardButton, ContentType
 
 import cards
+import config
 from buttons import *
 from cards import *
 from db import db
 
-bot = Bot(token="6716449345:AAGq_FhUKGWV1M7g7RhjLrFWxRKHkc5F0Nk")
+bot = Bot(token=config.BOT_TOKEN)
 dp = Dispatcher(bot, storage=MemoryStorage())
 user_cards: Dict[int, int] = {}
 showed_cards: Dict[int, Set[int]] = {}
